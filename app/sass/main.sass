@@ -1,8 +1,436 @@
-@import "reset"
-@import "fonts"
-@import "libs"
 @import "vars"
 
+//Base styles
+h1, h2, h3, h4, h5, h6
+	font-family: $font-playfair
+	margin: 0
+	padding: 0
+h4
+	font-size: 1.2em
+p
+	font-size: 1.6em
+body
+	font-family: $font-openSans
+	font-size: $fontsize-main
+	background: $color-light
+section
+	box-sizing: border-box
+	padding: 150px 0
+
+.sectionDark
+	background: $color-dark
+	color: $color-light
+.sectionLight
+	colorl: $color-dark
+.btnDefault
+	border: none
+	font-family: $font-playfair
+	font-size: 1.6em
+	color: $color-dark
+	text-decoration: none
+	padding: 19px 46.5px
+	border-radius: 50px 
+	background: $color-gold
+	transition: all .5s ease
+	&:hover
+		box-shadow: 0 0 25px -5px $color-gold
+		color: $color-text-default
+//---
+//Header styles
+.headerMain
+	position: relative
+	padding: 37.5px 0
+	text-transform: uppercase
+	height: 15vh
+	//logo styles
+	.logo
+		font-size: 2.5em
+		font-family: $font-playfair
+		font-weight: 700
+		.logoText
+			line-height: 70px
+		.dotGold
+			color: $color-gold
+	//---
+	//Nav styles
+	.boorger
+		color: #fff
+		line-height: 40px
+		text-align: center
+		font-size: 3.5em
+		position: absolute
+		left: calc(50% - 20px)
+		bottom: 10px
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		background: $color-gold
+		cursor: pointer
+		transition: all .2s ease
+		display: none
+	.boorger:hover
+		animation: jump .7s infinite
+		box-shadow: 0 0 60px $color-gold
+
+	.navList
+		white-space: nowrap 
+		padding-top: 6px
+		font-size: 1.2em
+		margin: 0 auto
+		margin-top: 10px
+		.navItem
+			font-weight: 600
+			display: inline
+			margin-right: 11px
+			a
+				padding: 16px 11px
+				color: $color-dark
+			a:hover
+				text-decoration: none
+				border-bottom: 5px solid $color-gold
+
+	//Boorger styles
+	.navBoorgerList
+		position: absolute
+		left: calc(50% - 131px)
+		display: none
+		opacity: 0
+		width: 300px
+		margin: 0 auto
+		margin-top: 50px
+		text-align: center
+		font-size: 3em
+		list-style: none
+		line-height: 70px
+		.navItem
+			font-weight: 600
+			margin-right: 11px
+			a
+				padding: 16px 11px
+				color: $color-dark
+			a:hover
+				text-decoration: none
+				border-bottom: 5px solid $color-gold
+	//---
+	//---
+//---
+//Preview styles
+.preview
+	position: relative
+	background: linear-gradient(180deg, rgba(255,255,255,0), #000), url(../res/img/bgs/preview-photo.png) no-repeat
+	background-size: cover
+	background-position: center top
+	.content
+		margin-top: 490px
+	.aboutPerson
+		border-left: 2px solid $color-gold
+		padding: 0 18px
+		h1
+			line-height: 50px
+			font-size: 6.5em
+		span
+			margin-top: 40px
+			line-height: 50px
+			font-size: 3.1em
+	.linkBox
+		margin-top: 42px
+		a
+			white-space: nowrap 
+			text-decoration: none
+//---
+//Sections
+.sectionHeader
+	border-left: 2px solid $color-gold
+	padding-left: 20px
+	margin-bottom: 74px
+	h2
+		margin-top: 5px
+		font-size: 3.1em
+		margin-bottom: 30px
+	p
+		font-size: 2.1em
+		font-family: $font-playfair
+
+.block
+	h3
+		font-family: $font-playfair
+		margin-bottom: 36px
+	ol
+		padding-left: 65px
+	li
+		margin-right: 10px
+		margin-bottom: 20px
+		font-weight: 700
+		font-size: 2.1em
+		line-height: 21px
+		span
+			display: block
+			margin-left: 30px
+			font-weight: 400
+			font-size: calc(2.1em - 1.3em)
+.expertise
+	p
+		line-height: 31px
+//---
+.service
+	p
+		margin: 10px 0 40px 0
+		font-size: 1.4em
+	display: block
+	i
+		font-size: 4.5em
+		color: $color-gold
+.bioCard
+	margin: 10px 0
+	transition: all .2s ease
+
+	img
+		width: 100%
+		margin: 0 auto
+
+	h3
+		margin: 30px 0 0 10px
+
+	span
+		margin-left: 10px
+		font-size: 1.6em
+
+	&:hover
+		box-shadow: 0 0 35px -10px $color-text-default
+.clientReview
+	opacity: 0
+	display: none
+.active
+	animation: fadeIn 2s
+	opacity: 1
+	display: block
+.client
+	position: relative
+	box-shadow: 20px 20px 0 $color-gold
+.review
+	position: relative
+	&::before
+		content: '“'
+		position: absolute
+		left: -40px
+		top: -15px
+		font-family: $font-playfair
+		font-size: 9.6em
+	p
+		margin-top: 33px
+	.aboutClient
+		display: block
+		left: 15px
+		span
+			font-size: 1.6em
+.caruselButtons
+	margin-top: 50px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	button
+		cursor: pointer
+		outline: none
+		width: 15px
+		height: 15px
+		border-radius: 50%
+		background: rgba(255,255,255,0)
+		border: 1px solid $color-light
+		margin: 0 3px
+	.selectBtn
+		background: rgba(255,255,255,1)
+.publication
+	position: relative
+	border-bottom: 2px solid $color-gold
+	transition: all .3s ease
+	margin-bottom: 10px
+	&:hover
+		box-shadow: 0 0 35px -10px $color-text-default
+	.shareWindow
+		display: none
+		position: absolute
+		bottom: -10px
+		left: 0
+		opacity: 0
+		width: 100%
+		height: 70px
+		background: $color-gold
+		z-index: 5
+		ul
+			position: absolute
+			bottom: calc(50% - 40px)
+			left: 10px
+			li
+				display: inline
+				a
+					font-size: 3em
+					margin-right: 15px
+				i
+					color: #000
+	.shareClose
+			content: url(../res/img/svg/times-solid.svg);
+			position: absolute
+			right: 10px
+			top: calc(50% - 7.5px)
+			width: 15px
+			height: 15px
+			font-size: 1.5em
+			cursor: pointer
+
+	img
+		width: 100%
+	.postMesage
+		padding: 5px
+	.postInfo
+		position: relative
+		margin-top: 20px
+	h4
+		margin-top: 5px
+		font-size: 1.6em
+		font-weight: 600
+		span
+			position: relative
+			font-size: 0.9em
+			font-style: italic
+			font-weight: 400
+	span
+		position: absolute
+		bottom: 0
+		right: 0
+		font-size: 1.5em
+		font-style: italic
+	p
+		margin-top: 40px
+		line-height: 31px
+	.postStats
+		cursor: default
+		margin-top: 40px
+		margin-bottom: 20px
+		position: relative
+		font-size: 1.6em
+		span
+			font-size: 0.9em
+			position: relative
+			font-style: normal
+		.share
+			position: absolute
+			right: 0
+			bottom: 0
+			cursor: pointer
+			background: none
+			border: none
+			&:hover
+				color: $color-gold
+
+.questions
+	ul
+		padding: 0
+		list-style: none
+	.questBtn
+		position: relative
+		text-align: left
+		width: 100%
+		font-size: 1.4em
+		background: none
+		border: none
+		color: $color-light
+		padding: 13.5px 0
+		border-bottom: 2px solid $color-gold
+		outline: none
+		cursor: pointer
+		transition: all .3s ease
+		&:hover
+			color: $color-gold
+		&::after
+			content: '+'
+			position: absolute
+			right: 5px
+			top: 25%
+			font-size: 1.6em
+			transition: all .3s ease
+	.questBtnSelected::after
+		transform: rotate(45deg)
+
+
+.answers
+	width: 100%
+	height: 100%
+	padding: 46px 42px
+	line-height: 31px
+	font-size: 1.4em
+	color: $color-text-default
+	background: linear-gradient(175deg, $color-gold, #F7D891)
+	.answer
+		display: none
+	.answerSelect
+		display: block
+.contactBox
+	padding: 25px
+	position: relative
+	box-shadow: 0 0 25px -10px $color-text-default
+	.inpt
+		width: 100%
+		height: 60px
+		border: none
+		border-bottom: 1px solid $color-gold
+		&::-webkit-input-placeholder
+			font-size: 1.4em
+	.txtara
+		height: 120px
+		resize: none
+	.btnDefault
+		cursor: pointer
+		margin-top: 20px
+		padding: 15px 40px
+		&:hover
+			box-shadow: 0 0 25px $color-gold
+			color: $color-text-default
+footer
+	padding: 20px
+	font-size: 1.6em
+	span
+		margin-top: 10px
+	ul
+		margin-top: 10px
+	li
+		color: $color-light
+		display: inline
+//---
+
+@keyframes fadeIn 
+	from 
+		opacity: 0
+	to 
+		opacity: 1
+
+@-webkit-keyframes jump 
+	from 
+		bottom: 10px
+	to 
+		bottom: 5px
+
+@-o-keyframes jump 
+	from 
+		bottom: 10px
+	to 
+		bottom: 5px
+
+@-moz-keyframes jump 
+	from 
+		bottom: 10px
+	to 
+		bottom: 5px
+
+@keyframes jump 
+	from 
+		bottom: 10px
+	50% 
+		bottom: 5px
+	to 
+		bottom: 10px
 
 
 @import "media" // Всегда в конце

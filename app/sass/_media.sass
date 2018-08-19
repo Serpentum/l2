@@ -4,27 +4,49 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
-
+	.map
+		display: none
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
-
+	.logo
+		text-align: center
+		height: 40px
+		margin-top: -20px
+		.logoText
+			line-height: 0px
+	.review::before
+		display: none
+	.clientReview .row
+		height: 650px
+	.headerMain 
+		height: 15vh
+	.preview
+		padding-bottom: 50px
+		.content 
+			margin-top: 250px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
-
+	.clientReview .row
+		height: 700px
+	.navList
+		display: none
+	.headerMain	.boorger
+		display: block
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
-
+	.clientReview .row
+		height: 800px
+	.client
+		width: 100%
+		height: 100%
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	/**/
+	.clientReview .row
+		height: 100%
 
 
 /*==========  Mobile First  ==========*/
